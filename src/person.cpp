@@ -23,14 +23,14 @@ int Person::getAge() const{
     return age;
 }
 
-void Person::setUsername(string& newUsername){
+void Person::setUsername(const string& newUsername){
     username = newUsername;
 }
 string Person::getUsername() const{
     return username;
 }
 
-void Person::setPassword(string& newPassword){
+void Person::setPassword(const string& newPassword){
     password = newPassword;
 }
 

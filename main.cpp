@@ -7,7 +7,9 @@
 
 
 int main(){
-    Admin admin("Mehmet", 22, "mehmet1", "123456");
+    Admin& admin = Admin::getInstance();
+    admin.initialize("Mehmet", 22, "mehmet1", "123456");
+    
     Ticket ticket1("Interstellar","2024-01-05 20:00", 20, 65);
     Ticket ticket2("Inception","2024-01-02 19:00", 20, 55);
     User user1("Alp", 24, "alp1", "123456");
@@ -29,7 +31,7 @@ int main(){
         switch (choice) {
             case 1:
                 if(admin.login()){
-                adminMenu(admin,tickets);
+                adminMenu(tickets);
                 } else{
                     cout << "Admin login failed. Please try again." << endl;
                 }

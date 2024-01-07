@@ -17,10 +17,10 @@ public:
     void setAge(int newAge);
     int getAge() const;
 
-    void setUsername(string& newUsername) ;
+    virtual void setUsername(const string& newUsername) ;
     string getUsername() const;
 
-    void setPassword(string& newPassword);
+    virtual void setPassword(const string& newPassword);
     string getPassword() const;
 
     virtual bool login();

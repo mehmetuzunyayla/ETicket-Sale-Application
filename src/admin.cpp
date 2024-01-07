@@ -3,11 +3,27 @@
 #include <iomanip> // For std::setprecision and std::fixed
 #include "ticket.h"
 
-Admin::Admin(){};
+// Private constructor implementation
+Admin::Admin() {};
 
-Admin:: Admin(const string& names, int ages, const string& usernames, const string& passwords)
-: Person(names,ages,usernames,passwords){}
+// Implementation of static getInstance method
+Admin& Admin::getInstance() {
+    static Admin instance;
+    return instance;
+}
+void Admin::initialize(const string& name, int age, const string& username, const string& password) {
+    setName(name);
+    setAge(age);
+    setUsername(username);
+    setPassword(password);
+}
+void Admin::setUsername(const string& newUsername) {
+    this->username = newUsername;
+}
 
+void Admin::setPassword(const string& newPassword) {
+    this->password = newPassword;
+}
 
 bool Admin::login() {
     string enteredUsername, enteredPassword;
@@ -113,8 +129,9 @@ void Admin::changePassword() {
 }
 
 
-void adminMenu(Admin& admin, vector<Ticket>& tickets) {
+void adminMenu(vector<Ticket>& tickets) {
     int choice;
+    Admin& admin = Admin::getInstance(); // Get the Singleton instance
 
     do {
         cout << "\n-------------------------\n";
