@@ -20,7 +20,10 @@ The ETicket Sale Application is a mid-sized ticketing platform designed for mana
 - **Cancel Ticket**: Feature to allow users to cancel previously purchased tickets.
 - **Search Ticket**: Users can search and view their ticket(s) details.
 
+## Information
+- **There are two executable files one of them for windows systems and the other one for Macos.
+
 ## Support and Contact
 
-- You can make commit or just reach me. 
+- You can commit or just reach me. 
 
