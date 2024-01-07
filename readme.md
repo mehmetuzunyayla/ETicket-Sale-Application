@@ -22,5 +22,5 @@ The ETicket Sale Application is a mid-sized ticketing platform designed for mana
 
 ## Support and Contact
 
-(Provide contact information or links for support - where users can get help or report issues.)
+- You can make commit or just reach me. 
 
